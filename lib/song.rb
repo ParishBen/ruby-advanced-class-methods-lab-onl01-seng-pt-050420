@@ -46,7 +46,7 @@ end
     self.all.sort_by{|s| s.name}
   end
   
-end
+
 def self.new_from_filename(filename)
     parts = filename.split(" - ")
     artistsname = parts[0]
@@ -58,17 +58,17 @@ def self.new_from_filename(filename)
     song
   end
 
-  def self.create_from_filename(filename)
+  def Song.create_from_filename(filename)
     parts = filename.split(" - ")
-    artist_name = parts[0]
-    song_name = parts[1][0..-5]
+    artistsname = parts[0]
+    songsname = parts[1][0..-5]
 
     song = self.create
     song.name = songsname
     song.artist_name = artistsname
     song
   end
-
+end
   
 
   
