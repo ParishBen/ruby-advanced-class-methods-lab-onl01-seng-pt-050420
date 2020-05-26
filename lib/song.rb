@@ -43,7 +43,8 @@ def self.destroy_all
 end
 
       def self.alphabetical
-    self.all.sort_by{|s| s.name}
+    golly=self.all.sort_by{|s| s.name}
+    golly
   end
   
 
