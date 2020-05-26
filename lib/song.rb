@@ -43,8 +43,8 @@ def self.destroy_all
 end
 
       def self.alphabetical
-    golly=self.all.sort_by{|s| s.name}
-    golly
+    golly = self.all.uniq
+    golly.sort_by {|songs| songs.name}
   end
   
 
